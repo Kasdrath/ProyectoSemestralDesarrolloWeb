@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('egresos', function (Blueprint $table) {
             $table->id();
-
+            $table->date('fecha_egreso');
             $table->unsignedBigInteger('egre_centro_distribucion_id')->nullable();
             $table->foreign('egre_centro_distribucion_id')->references('id')->on('centro_distribucions');
 

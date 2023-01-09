@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class CentroDistribucion extends Model
 {
     use HasFactory;
+
+    protected $table = 'centrodistribucions';
+    protected $primaryKey = 'id';
+    public $timestamps = true;
+
+    protected $fillable = [
+        "cd_codigo",
+        "cd_direccion",
+        "cd_telefono"
+    ];
 }

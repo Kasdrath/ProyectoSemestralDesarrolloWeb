@@ -19,8 +19,8 @@ return new class extends Migration
             $table->unsignedBigInteger('tras_centro_distribucion_id')->nullable();
             $table->foreign('tras_centro_distribucion_id')->references('id')->on('centro_distribucions');
 
-            $table->unsignedBigInteger('tras_farmacia_id')->nullable();
-            $table->foreign('tras_farmacia_id')->references('id')->on('farmacias');
+            //$table->unsignedBigInteger('tras_farmacia_id')->nullable();
+            //$table->foreign('tras_farmacia_id')->references('id')->on('farmacias');
 
             $table->timestamps();
         });

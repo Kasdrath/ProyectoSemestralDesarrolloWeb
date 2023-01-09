@@ -34,5 +34,9 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('stocks');
+        Schema::table('stocks', function (Blueprint $table) {
+            $table->dropForeign('scd_medicamento_id');
+            $table->dropForeign('scd_centro_distribucion_id');
+        });
     }
 };

@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('ingresos', function (Blueprint $table) {
             $table->id();
-
+            $table->date('fecha_ingreso');
             $table->unsignedBigInteger('ingre_centro_distribucion_id')->nullable();
             $table->foreign('ingre_centro_distribucion_id')->references('id')->on('centro_distribucions');
 
-            $table->unsignedBigInteger('ingre_farmacia_id')->nullable();
-            $table->foreign('ingre_farmacia_id')->references('id')->on('farmacias');
+            // $table->unsignedBigInteger('ingre_farmacia_id')->nullable();
+            // $table->foreign('ingre_farmacia_id')->references('id')->on('farmacias');
 
             $table->timestamps();
         });
