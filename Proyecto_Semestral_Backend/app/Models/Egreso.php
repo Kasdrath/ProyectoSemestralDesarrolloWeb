@@ -19,11 +19,11 @@ class Egreso extends Model
 
     public function egreCentroDID()
     {
-        return $this->belongsTo(Medicamento::class, "egre");
+        return $this->belongsTo(Egreso::class, "egre_centro_distribucion_id");
     }
 
     public function egreFarmaciaID()
     {
-        return $this->belongsTo(CentroDistribucion::class, "scd_centro_distribucion_id");
+        return $this->belongsTo(Egreso::class, "egre_farmacia_id");
     }
 }

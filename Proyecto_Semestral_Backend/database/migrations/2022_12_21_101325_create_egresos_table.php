@@ -34,5 +34,9 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('egresos');
+        Schema::table('egresos', function (Blueprint $table) {
+            $table->dropForeign('egre_centro_distribucion_id');
+            $table->dropForeign('egre_farmacia_id');
+        });
     }
 };

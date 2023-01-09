@@ -19,11 +19,11 @@ class Stock extends Model
 
     public function scdMedicamentoID()
     {
-        return $this->belongsTo(Medicamento::class, "scd_medicamento_id");
+        return $this->belongsTo(Stock::class, "scd_medicamento_id");
     }
 
     public function scdCentroID()
     {
-        return $this->belongsTo(CentroDistribucion::class, "scd_centro_distribucion_id");
+        return $this->belongsTo(Stock::class, "scd_centro_distribucion_id");
     }
 }

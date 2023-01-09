@@ -19,6 +19,6 @@ class Ingreso extends Model
 
     public function ingreCentroDID()
     {
-        return $this->belongsTo(CentroDistribucion::class, "ingre_centro_distribucion_id");
+        return $this->belongsTo(Ingreso::class, "ingre_centro_distribucion_id");
     }
 }
