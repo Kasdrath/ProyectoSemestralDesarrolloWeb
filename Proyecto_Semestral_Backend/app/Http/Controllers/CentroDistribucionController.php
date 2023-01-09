@@ -13,8 +13,12 @@ class CentroDistribucionController extends Controller
         $this->mainRepo = $mainRepo;
     }
 
-    public function stockCentroD()
+    public function agregarCentroID(Request $request)
     {
-        return $this->mainRepo->stockCentroD();
+    }
+
+    public function stockCentroD(Request $request)
+    {
+        return $this->mainRepo->stockCentroD($request);
     }
 }

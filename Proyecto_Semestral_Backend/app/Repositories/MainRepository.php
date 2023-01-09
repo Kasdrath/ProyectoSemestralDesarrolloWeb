@@ -11,7 +11,7 @@ use Exception;
 
 class MainRepository
 {
-    public function stockCentroD()
+    public function stockCentroD($request)
     {
         $centrod = CentroDistribucion::all();
         return $centrod;
