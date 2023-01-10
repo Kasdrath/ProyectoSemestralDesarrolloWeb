@@ -20,7 +20,7 @@ return new class extends Migration
             $table->foreign('scd_medicamento_id')->references('id')->on('medicamentos');
 
             $table->unsignedBigInteger('scd_centro_distribucion_id')->nullable();
-            $table->foreign('scd_centro_distribucion_id')->references('id')->on('centro_distribucions');
+            $table->foreign('scd_centro_distribucion_id')->references('id')->on('centrodistribucions');
 
             $table->timestamps();
         });

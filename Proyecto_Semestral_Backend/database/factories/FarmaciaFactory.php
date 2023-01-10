@@ -17,7 +17,9 @@ class FarmaciaFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'farm_nombre' => $this->faker->name(),
+            'farm_direccion' => $this->faker->text(15),
+            'farm_mail' => $this->faker->email()
         ];
     }
 }

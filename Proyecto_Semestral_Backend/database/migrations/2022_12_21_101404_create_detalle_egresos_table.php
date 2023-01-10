@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('detalle_egresos', function (Blueprint $table) {
+        Schema::create('detalleegresos', function (Blueprint $table) {
             $table->id();
 
             $table->unsignedBigInteger('egre_medicamento_id')->nullable();

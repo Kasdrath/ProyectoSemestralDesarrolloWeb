@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->date('fecha_egreso');
             $table->unsignedBigInteger('egre_centro_distribucion_id')->nullable();
-            $table->foreign('egre_centro_distribucion_id')->references('id')->on('centro_distribucions');
+            $table->foreign('egre_centro_distribucion_id')->references('id')->on('centrodistribucions');
 
             $table->unsignedBigInteger('egre_farmacia_id')->nullable();
             $table->foreign('egre_farmacia_id')->references('id')->on('farmacias');

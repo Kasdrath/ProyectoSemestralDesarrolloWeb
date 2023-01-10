@@ -17,7 +17,9 @@ class CentroDistribucionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'cd_codigo' => $this->faker->unique()->randomNumber(5),
+            'cd_direccion' => $this->faker->text(15),
+            'cd_telefono' => $this->faker->unique()->randomNumber(9)
         ];
     }
 }

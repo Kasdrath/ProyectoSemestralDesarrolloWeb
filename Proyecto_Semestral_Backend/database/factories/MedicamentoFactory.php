@@ -17,7 +17,8 @@ class MedicamentoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'med_nombre' => $this->faker->name(),
+            'med_compuesto' => $this->faker->text(10),
         ];
     }
 }

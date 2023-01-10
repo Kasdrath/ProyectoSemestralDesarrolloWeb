@@ -9,7 +9,7 @@ class DetalleEgreso extends Model
 {
     use HasFactory;
 
-    protected $table = 'egresos';
+    protected $table = 'detalleegresos';
     protected $primaryKey = 'id';
     public $timestamps = true;
 

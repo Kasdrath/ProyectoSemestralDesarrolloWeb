@@ -19,11 +19,11 @@ class crearIngresoRequest extends FormRequest
     public function rules()
     {
         return [
-            'ingre_fecha'=>'nullable',
-            'ingre_centro_distribucion'=>'required|exists:centro_distribucions,id',
-            'medicamentos'=>'array|required',
-            'medicamentos.*.id_medicamento'=>'required|exists:medicamentos,id|distinct',
-            'medicamentos.*.cantidad'=>'required|integer|gt:0',
+            'ingre_fecha' => 'nullable',
+            'ingre_centro_distribucion' => 'required|exists:centrodistribucions,id',
+            'medicamentos' => 'array|required',
+            'medicamentos.*.id_medicamento' => 'required|exists:medicamentos,id|distinct',
+            'medicamentos.*.cantidad' => 'required|integer|gt:0',
 
         ];
     }
