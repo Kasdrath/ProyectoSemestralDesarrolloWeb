@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 // eslint-disable-next-line
 import { Button, Card, CardActions, CardContent, Container } from '@mui/material';
 import { styled } from '@mui/material/styles';
@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -21,12 +22,16 @@ const ExpandMore = styled((props) => {
 
 
 
+
+
 export default function CDCard(props) {
     const [expanded, setExpanded] = React.useState(false);
 
     const handleExpandClick = () => {
         setExpanded(!expanded)
     };
+
+
 
     return (
         <Card sx={{ bgcolor: "#E8E8E8" }} >

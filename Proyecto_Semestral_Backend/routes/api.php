@@ -20,5 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::prefix('/ApiRoutes')->group(function () use ($router) {
-    $router->post('/listaCD', [CentroDistribucionController::class, 'stockCentroID']);
+    $router->get('/listaCD', [CentroDistribucionController::class, 'stockCentroD']);
 });
