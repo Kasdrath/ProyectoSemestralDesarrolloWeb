@@ -2,8 +2,6 @@ import * as React from 'react';
 import { useEffect, useState } from 'react';
 import CDCard from './CentroDistribucionCard';
 import axios from 'axios';
-// eslint-disable-next-line
-//import {Link} from 'react-router-dom';
 import { FormControl } from '@mui/material';
 import { InputLabel } from '@mui/material';
 import { Select } from '@mui/material';
@@ -15,14 +13,6 @@ const Home = () => {
 
     const [centroDist, setCentroDist] = useState([]);
     const [selectedCentroDist, setSelectedCentroDist] = useState("");
-    // useEffect ( ()=> {
-    //     getAllCentroDist()
-    // }, [])
-    // const getAllCentroDist = async () => {
-    //     const response = await axios.get(`${endpoint}/ApiRoutes/listaCD`)
-    //     console.log("Listando centros de distribucion");
-    //     setCentroDist(response.data)
-    // }
 
     useEffect(() => {
         getCentroID();
@@ -44,17 +34,6 @@ const Home = () => {
     const handleChangeCentroDist = (event) => {
         setSelectedCentroDist(event.target.value);
     };
-
-    /*const ShowCentroDist = () => {
-        const [centroDist, setCentroDist] = useState([])
-        useEffect(() => {
-            getAllCentroDist()
-        }, [])
-        const getAllCentroDist = async () => {
-            const response = await axios.get(`${endpoint}/listaCD`)
-            setCentroDist(response.data)
-        }
-    }*/
 
     return (
         <div style={{ margin: 100 }}>
