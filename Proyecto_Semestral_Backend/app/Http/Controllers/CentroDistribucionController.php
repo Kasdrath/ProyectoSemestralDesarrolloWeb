@@ -3,22 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Repositories\MainRepository;
+use App\Http\Repositorios\CentroDistribucionRepositorio;
 
 class CentroDistribucionController extends Controller
 {
-    protected MainRepository $mainRepo;
-    public function __construct(MainRepository $mainRepo)
+    protected CentroDistribucionRepositorio $cdRepo;
+    public function __construct(CentroDistribucionRepositorio $cdRepo)
     {
-        $this->mainRepo = $mainRepo;
+        $this->cdRepo = $cdRepo;
     }
 
-    public function agregarCentroID(Request $request)
+    public function listaCD(Request $request)
     {
+        return $this->cdRepo->listaCD($request);
     }
 
-    public function stockCentroD(Request $request)
+    public function mostrarStock(Request $request)
     {
-        return $this->mainRepo->stockCentroD($request);
+        return $this->cdRepo->mostrarStockCD($request->getContent());
     }
 }
