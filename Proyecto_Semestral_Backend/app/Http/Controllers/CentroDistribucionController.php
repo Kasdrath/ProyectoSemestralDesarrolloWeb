@@ -18,6 +18,11 @@ class CentroDistribucionController extends Controller
         return $this->cdRepo->listaCD($request);
     }
 
+    public function agregarCentroCD(Request $request)
+    {
+        return $this->cdRepo->agregarCentroCD($request);
+    }
+
     public function mostrarStock(Request $request)
     {
         return $this->cdRepo->mostrarStockCD($request->getContent());

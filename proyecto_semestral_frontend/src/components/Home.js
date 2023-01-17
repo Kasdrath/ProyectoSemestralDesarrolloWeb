@@ -14,14 +14,7 @@ const Home = () => {
 
     const [centroDist, setCentroDist] = useState([]);
     const [selectedCentroDist, setSelectedCentroDist] = useState("");
-    // useEffect ( ()=> {
-    //     getAllCentroDist()
-    // }, [])
-    // const getAllCentroDist = async () => {
-    //     const response = await axios.get(`${endpoint}/ApiRoutes/listaCD`)
-    //     console.log("Listando centros de distribucion");
-    //     setCentroDist(response.data)
-    // }
+
 
     useEffect(() => {
         getCentroID();
