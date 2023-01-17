@@ -42,7 +42,10 @@ const Home = () => {
         try {
             const response = await axios.post(`${endpoint}/ApiRoutes/mostrarStock`, selectedCentroDist);
             if (response.status === 200) {
-                alert("Cantidad de stock disponible" + response.data);
+                console.log("Probando response.data");
+                console.log(response.data);
+                alert("Cantidad de stock disponible: " + response.data);
+                //return response.data;
             }
         }
         catch (error) {
@@ -81,6 +84,14 @@ const Home = () => {
                     }
                 </Select>
             </FormControl>
+            {
+                centroDist.map((centro) => (
+                    <CDCard
+                        name={centro.cd_codigo}
+                        description={mandarCD}
+                    />
+                ))
+            }
             <CDCard
                 name={"Centro de distribucion 1"}
                 description={"Probando descripcion"}
